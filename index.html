@@ -3,13 +3,174 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#131310"><title>coso risk2</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/2sDeZGxYgY7LkLT0mX4Dan29.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/2sDeZGxYgY7LkLT0mWoDag.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/m8JPje1VVIzcq1HzJq2AEdo2Tj_qvLqMHdYgVcM.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/m8JPje1VVIzcq1HzJq2AEdo2Tj_qvLqMCdYg.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* self-hosted fonts (no external CDN) */
+@font-face {
+  font-family: 'Anuphan';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(fonts/2sDeZGxYgY7LkLT0mX4Dan29.woff2) format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: 'Anuphan';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/2sDeZGxYgY7LkLT0mWUDan29.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Anuphan';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/2sDeZGxYgY7LkLT0mWQDan29.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Anuphan';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(fonts/2sDeZGxYgY7LkLT0mWoDag.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Anuphan';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(fonts/2sDeZGxYgY7LkLT0mX4Dan29.woff2) format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: 'Anuphan';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/2sDeZGxYgY7LkLT0mWUDan29.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: 'Anuphan';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/2sDeZGxYgY7LkLT0mWQDan29.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Anuphan';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(fonts/2sDeZGxYgY7LkLT0mWoDag.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/m8JPje1VVIzcq1HzJq2AEdo2Tj_qvLqMBNYgVcM.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(fonts/m8JPje1VVIzcq1HzJq2AEdo2Tj_qvLqMHdYgVcM.woff2) format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/m8JPje1VVIzcq1HzJq2AEdo2Tj_qvLqMB9YgVcM.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(fonts/m8JPje1VVIzcq1HzJq2AEdo2Tj_qvLqMCdYg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/m8JMje1VVIzcq1HzJq2AEdo2Tj_qvLqE-vU1Z-JHa74.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/m8JMje1VVIzcq1HzJq2AEdo2Tj_qvLqE-vU1fuJHa74.woff2) format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/m8JMje1VVIzcq1HzJq2AEdo2Tj_qvLqE-vU1ZOJHa74.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/m8JMje1VVIzcq1HzJq2AEdo2Tj_qvLqE-vU1auJH.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/m8JMje1VVIzcq1HzJq2AEdo2Tj_qvLqE1vI1Z-JHa74.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/m8JMje1VVIzcq1HzJq2AEdo2Tj_qvLqE1vI1fuJHa74.woff2) format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/m8JMje1VVIzcq1HzJq2AEdo2Tj_qvLqE1vI1ZOJHa74.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'IBM Plex Sans Thai';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/m8JMje1VVIzcq1HzJq2AEdo2Tj_qvLqE1vI1auJH.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root{--cream:#f4eee2;--muted:#c3b9a8;--gold:#cfad77;--hair:rgba(232,217,190,.32);--col:36.25vw;--body:clamp(17px,1.45vw,21px)}
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#131310;color:var(--cream);font-family:"IBM Plex Sans Thai","Anuphan",system-ui,sans-serif;font-variant-numeric:tabular-nums}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:5px}button:disabled{opacity:.25;cursor:default}
 #world{position:fixed;inset:0;width:100%;height:100%;display:block}.scrim{position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(12,13,11,.97),rgba(12,13,11,.87) 29%,rgba(12,13,11,.42) 47%,transparent 69%);transition:opacity .45s}body.right .scrim{background:linear-gradient(270deg,rgba(12,13,11,.95),rgba(12,13,11,.88) 28%,rgba(12,13,11,.43) 47%,transparent 72%)}
-.slide{position:fixed;inset:0;visibility:hidden;opacity:0;transition:opacity .35s;pointer-events:none}.slide.active{visibility:visible;opacity:1}.slide header,.slide main,.slide footer{position:absolute;left:6.5vw;width:var(--col)}.slide.right header,.slide.right main,.slide.right footer{left:50vw}.slide header{top:7vh;height:40px;border-bottom:1px solid var(--hair);display:flex;align-items:flex-start;gap:24px;font-size:12px}.slide .num{font-family:"Anuphan","IBM Plex Sans Thai",system-ui,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--gold)}.category{color:var(--muted);font-weight:400}.principles{margin-left:auto;color:var(--muted)}.slide main{top:26vh}.slide h1,.slide h2{font-family:"Anuphan","IBM Plex Sans Thai",system-ui,sans-serif;font-size:clamp(42px,4.4vw,64px);font-weight:700;line-height:1.28;text-wrap:balance;margin:0;letter-spacing:0}.slide h1{font-size:clamp(54.6px,5.72vw,83.2px)}.english{font-size:13px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:16px 0 32px;line-height:1.6}.slide ul{list-style:none;padding:0;margin:0;display:grid;gap:16px;font-size:var(--body);line-height:1.55}.slide li{position:relative;padding-left:34px}.slide li:before{content:"";position:absolute;left:0;top:.79em;width:18px;height:1px;background:var(--gold)}.slide footer{bottom:9vh;border-top:1px solid var(--hair);padding-top:16px;display:flex;gap:16px;justify-content:space-between;align-items:flex-start;font-size:14px;line-height:1.55;color:var(--muted)}footer .count{white-space:nowrap;font-family:"Anuphan","IBM Plex Sans Thai",system-ui,sans-serif;font-weight:600;color:var(--gold)}.metrics{display:flex;gap:32px;margin:-8px 0 24px}.metric strong{font-family:"Anuphan","IBM Plex Sans Thai",system-ui,sans-serif;font-size:clamp(48px,5vw,76px);font-weight:700;line-height:1.05;display:block}.metric span{font-size:14px;color:var(--muted)}.steps{display:flex;align-items:flex-start;margin:24px 0;gap:8px;font-size:14px;color:var(--cream)}.step{flex:1;position:relative;line-height:1.5}.step:before{content:"";display:block;width:7px;height:7px;background:var(--gold);border-radius:50%;margin-bottom:8px}.step:not(:last-child):after{content:"";position:absolute;top:3px;left:15px;right:0;height:1px;background:var(--hair)}
+.slide{position:fixed;inset:0;visibility:hidden;opacity:0;transition:opacity .2s;pointer-events:none}.slide.active{visibility:visible;opacity:1}.slide header,.slide main,.slide footer{position:absolute;left:6.5vw;width:var(--col)}.slide.right header,.slide.right main,.slide.right footer{left:50vw}.slide header{top:7vh;height:40px;border-bottom:1px solid var(--hair);display:flex;align-items:flex-start;gap:24px;font-size:12px}.slide .num{font-family:"Anuphan","IBM Plex Sans Thai",system-ui,sans-serif;font-weight:600;letter-spacing:.12em;color:var(--gold)}.category{color:var(--muted);font-weight:400}.principles{margin-left:auto;color:var(--muted)}.slide main{top:26vh}.slide h1,.slide h2{font-family:"Anuphan","IBM Plex Sans Thai",system-ui,sans-serif;font-size:clamp(42px,4.4vw,64px);font-weight:700;line-height:1.28;text-wrap:balance;margin:0;letter-spacing:0}.slide h1{font-size:clamp(54.6px,5.72vw,83.2px)}.english{font-size:13px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:16px 0 32px;line-height:1.6}.slide ul{list-style:none;padding:0;margin:0;display:grid;gap:16px;font-size:var(--body);line-height:1.55}.slide li{position:relative;padding-left:34px}.slide li:before{content:"";position:absolute;left:0;top:.79em;width:18px;height:1px;background:var(--gold)}.slide footer{bottom:9vh;border-top:1px solid var(--hair);padding-top:16px;display:flex;gap:16px;justify-content:space-between;align-items:flex-start;font-size:14px;line-height:1.55;color:var(--muted)}footer .count{white-space:nowrap;font-family:"Anuphan","IBM Plex Sans Thai",system-ui,sans-serif;font-weight:600;color:var(--gold)}.metrics{display:flex;gap:32px;margin:-8px 0 24px}.metric strong{font-family:"Anuphan","IBM Plex Sans Thai",system-ui,sans-serif;font-size:clamp(48px,5vw,76px);font-weight:700;line-height:1.05;display:block}.metric span{font-size:14px;color:var(--muted)}.steps{display:flex;align-items:flex-start;margin:24px 0;gap:8px;font-size:14px;color:var(--cream)}.step{flex:1;position:relative;line-height:1.5}.step:before{content:"";display:block;width:7px;height:7px;background:var(--gold);border-radius:50%;margin-bottom:8px}.step:not(:last-child):after{content:"";position:absolute;top:3px;left:15px;right:0;height:1px;background:var(--hair)}
 #rail{filter:drop-shadow(0 1px 3px #000);position:fixed;right:16px;top:32%;width:10vw;max-width:144px;display:grid;gap:16px;z-index:5}#rail button{padding:0;border:0;background:none;text-align:right;font-size:11px;line-height:1.35;color:#a69c8c;display:flex;justify-content:flex-end;gap:8px;align-items:center}#rail button:after{content:"";height:4px;width:4px;flex:none;border-radius:50%;background:#736c61}#rail button[aria-current="step"]{color:var(--cream)}#rail button[aria-current="step"]:after{background:var(--gold);height:16px;border-radius:2px}.controls{position:fixed;bottom:24px;left:6.5vw;right:6.5vw;display:flex;justify-content:space-between;align-items:center;z-index:10}.tools,.paging{display:flex;align-items:center;gap:24px}.controls button{border:0;background:none;padding:8px 0;font-size:12px}.controls kbd{font:inherit;color:var(--gold);border:1px solid var(--hair);border-radius:4px;padding:3px 6px;margin-right:8px}.hint{font-size:11px;color:#a69c8c}.paging button{font-size:14px}.paging #next{color:var(--gold)}#progress{position:fixed;left:0;bottom:0;height:2px;width:12.5%;background:var(--gold);transition:width .6s}#notes{position:fixed;z-index:30;inset:12vh 16vw;background:#1e201bf5;border:1px solid var(--hair);padding:40px;overflow:auto;box-shadow:0 24px 100px #000a;border-radius:4px}#notes[hidden]{display:none}#notes h2{font-family:"Anuphan","IBM Plex Sans Thai",system-ui,sans-serif;font-size:28px;margin:0 0 24px}#notes p,#notes li{font-size:18px;line-height:1.8}#notes a{color:var(--gold)}#close-notes{float:right;background:none;border:0;font-size:24px}#notes small{display:block;color:var(--muted);margin-bottom:16px}#status{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);max-width:80vw;z-index:40;font-size:13px;color:var(--muted);text-align:center;background:#151611e6;padding:8px 16px;border-radius:4px}#status:empty{display:none}.scene-caption{position:fixed;top:7vh;left:55vw;color:#b3a58b;letter-spacing:.15em;font-size:10px;pointer-events:none}body.right .scene-caption{left:6.5vw}.fade .slide.active{opacity:0}.fade .scene-caption{opacity:0}
 @media(max-width:1100px){#rail{width:9vw;right:8px}#rail button{font-size:10px}.slide.right header,.slide.right main,.slide.right footer{left:49vw}.english{margin-bottom:24px}.slide ul{gap:16px}.metrics{gap:24px}.hint{display:none}}
 @media(max-height:760px) and (min-width:761px){.slide main{top:26vh}.slide h1{font-size:clamp(46px,5vw,68px)}.slide h2{font-size:clamp(38px,3.8vw,54px)}.english{margin:8px 0 16px}.slide ul{gap:8px;font-size:17px}.metrics{margin:0 0 16px}.metric strong{font-size:48px}.steps{margin:16px 0}.controls{bottom:8px}.slide footer{font-size:12px;padding-top:8px}}
@@ -19,7 +180,7 @@
 @media(max-width:760px){.controls .tools{gap:8px}.controls{left:4vw;right:4vw}.paging{gap:12px}#notes-button{font-size:0}#notes-button kbd{font-size:11px}#render-mode{font-size:10px}}
 .members{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 20px;flex:1;color:var(--muted);font-size:12px;line-height:1.5}.members>span{white-space:nowrap}.slide:first-child header{height:52px}@media(max-width:760px){.slide:first-child header{top:5vh;height:52px;gap:12px}.members{font-size:11px;column-gap:10px}}.members-label{grid-column:1/-1;color:var(--gold);font-weight:600;margin-bottom:2px}.slide:first-child header{height:72px}.sources{display:grid;gap:4px;font-size:12px;line-height:1.5}.sources strong{color:var(--gold);font-size:14px}.sources a{color:var(--muted);pointer-events:auto;text-underline-offset:3px}@media(max-width:760px){.slide:first-child header{top:3vh;height:72px}.sources{font-size:10px;gap:2px}.sources strong{font-size:12px}}body.references .scrim{background:#131510}body.references #world{visibility:hidden}body.references .scene-caption{display:none}.references-slide header,.references-slide main,.references-slide footer{left:6.5vw;width:78vw}.references-slide main{top:16vh;bottom:15vh;overflow:auto;pointer-events:auto;padding-right:12px;max-height:none}.references-slide h2{font-size:clamp(30px,3.4vw,48px);max-width:none}.reference-intro{color:var(--muted);font-size:14px;margin:8px 0 20px}.reference-list{list-style:none;margin:0;padding:0;display:grid;gap:0}.reference-list li{display:grid;grid-template-columns:32px 1fr;gap:16px;border-top:1px solid var(--hair);padding:14px 0;font-size:14px}.reference-list li:before{display:none}.ref-number{color:var(--gold);font-size:12px}.reference-list h3{font-size:clamp(15px,1.45vw,20px);line-height:1.4;font-weight:500;margin:0 0 5px}.reference-list p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}.ref-meta{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:4px;font-size:11px;color:var(--muted)}.ref-meta a{color:var(--gold);text-underline-offset:3px}.references-slide footer{bottom:9vh}@media(max-width:760px){.references-slide header{top:5vh}.references-slide main{top:24vh;bottom:15vh;width:87vw;max-height:none}.references-slide footer{width:87vw}.reference-list li{grid-template-columns:24px 1fr;gap:8px;padding:12px 0}.reference-intro{font-size:12px}.ref-meta{display:grid;gap:3px}}@media(max-height:760px) and (min-width:761px){.reference-list li{padding:8px 0}.reference-list h3{font-size:15px}.reference-intro{margin-bottom:10px}.references-slide main{top:16vh;bottom:16vh}}
 </style>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
 </head><body>
 <canvas id="world" aria-label="ห้องโถงสามมิติ แท่นจัดแสดงแปดฉาก"></canvas><div class="scrim"></div>
 <div id="slides"></div><nav id="rail" aria-label="เลือกฉาก"></nav><div class="scene-caption" id="scene-caption"></div>
@@ -47,14 +208,14 @@ const references=[
 slides.push({title:'แหล่งข้อมูลอ้างอิง',cat:'ที่มา',name:'แหล่งข้อมูลอ้างอิง',caption:'',bullets:[],notes:'แหล่งข้อมูลอ้างอิงและอ่านเพิ่มเติม 5 รายการจากเว็บไซต์ COSO ตรวจสอบชื่อผู้แต่งและเอกสาร วันที่สืบค้น 9 กันยายน 2569'});
 const referenceHTML=`<section class="slide references-slide" aria-hidden="true" aria-label="สไลด์ 9 จาก 9"><header><span class="num">09</span><span class="category">ที่มา · REFERENCES</span></header><main><h2>แหล่งข้อมูลอ้างอิง</h2><p class="reference-intro">กรอบแนวคิดและเอกสารอ่านเพิ่มเติมเกี่ยวกับการบริหารความเสี่ยงองค์กร</p><ol class="reference-list">${references.map((r,i)=>`<li><span class="ref-number">${String(i+1).padStart(2,'0')}</span><div><h3>${r.title}</h3><p>ผู้แต่ง: ${r.author} · ปีเผยแพร่: ${r.year}</p><div class="ref-meta"><a href="${r.url}" target="_blank" rel="noopener">${i===4?'coso.org/guidance-erm':'coso.org · เปิดเอกสาร PDF'} ↗</a><span>วันที่สืบค้น: 9 กันยายน 2569</span></div></div></li>`).join('')}</ol></main><footer><span>COSO · Enterprise Risk Management</span><span class="count">09 / 09</span></footer></section>`;
 window.deckData=slides;
-const $=s=>document.querySelector(s);let current=0,busy=false,notesFocus=null;
+const $=s=>document.querySelector(s);let current=0,busy=false,queued=null,intent=0,notesFocus=null;
 $('#slides').innerHTML=slides.map((s,i)=>i===8?referenceHTML:`<section class="slide ${i%2?'right':''} ${i===0?'active':''}" aria-hidden="${i!==0}" aria-label="สไลด์ ${i+1} จาก 9"><header><span class="num">${String(i+1).padStart(2,'0')}</span>${i===0?'<span class="members" aria-label="สมาชิก"><strong class="members-label">สมาชิก</strong><span>นราธิป แจ้งไสว</span><span>วรานนท์ ทรัพย์คง</span><span>ธนโชติ เพ็ญศิรินภา</span><span>สุทธิพงศ์ ทองศรี</span></span>':`<span class="category">${s.cat}</span>`}${s.range?`<span class="principles">หลักการ ${s.range}</span>`:''}</header><main><${i?'h2':'h1'}>${s.title}</${i?'h2':'h1'}><p class="english">${s.en}</p>${s.metrics?'<div class="metrics"><div class="metric"><strong>5</strong><span>องค์ประกอบ</span></div><div class="metric"><strong>20</strong><span>หลักการ</span></div><div class="metric"><strong>2017</strong><span>ฉบับปี</span></div></div>':''}${i===4?stepHTML(s.steps):''}<ul>${s.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>${i===7?stepHTML(s.steps):''}</main><footer>${i===7?'<span class="sources"><strong>ที่มา</strong><span>COSO (2017). Enterprise Risk Management—<br>Integrating with Strategy and Performance.</span><a href="https://www.coso.org/guidance-erm" target="_blank" rel="noopener">coso.org/guidance-erm ↗</a></span>':`<span>เปรียบเทียบ: ${s.compare}</span>`}<span class="count">${String(i+1).padStart(2,'0')} / 09</span></footer></section>`).join('');
 function stepHTML(a){return `<div class="steps">${a.map(t=>`<span class="step">${t}</span>`).join('')}</div>`}
 $('#rail').innerHTML=slides.map((s,i)=>`<button data-index="${i}" aria-label="${i+1} ${s.name}" ${i===0?'aria-current="step"':''}><span>${s.name}</span></button>`).join('');
 function update(){document.body.classList.toggle('right',current%2===1);document.body.classList.toggle('references',current===8);document.querySelectorAll('.slide').forEach((s,i)=>{s.classList.toggle('active',i===current);s.setAttribute('aria-hidden',i!==current);s.inert=i!==current});document.querySelectorAll('#rail button').forEach((b,i)=>i===current?b.setAttribute('aria-current','step'):b.removeAttribute('aria-current'));$('#prev').disabled=current===0;$('#next').disabled=current===slides.length-1;$('#progress').style.width=(current+1)/slides.length*100+'%';$('#scene-caption').textContent=slides[current].caption;$('#notes-title').textContent=slides[current].title.replace(/<br>/g,'');$('#notes-label').textContent=`บันทึกผู้บรรยาย · ${String(current+1).padStart(2,'0')} / 09`;$('#notes-content').innerHTML=`<p>${slides[current].notes}</p><p><a href="https://www.coso.org/guidance-erm" target="_blank" rel="noopener">แหล่งอ้างอิง: COSO · Enterprise Risk Management (2017)</a></p>`;location.hash=String(current+1)}
-async function go(n){n=Math.max(0,Math.min(slides.length-1,n));if(busy||n===current||!$('#notes').hidden)return;busy=true;const old=current;document.body.classList.add('fade');await new Promise(r=>setTimeout(r,matchMedia('(prefers-reduced-motion: reduce)').matches?0:280));current=n;update();if(window.moveCamera)await window.moveCamera(old,n);document.body.classList.remove('fade');busy=false}
+async function go(n){n=Math.max(0,Math.min(slides.length-1,n));if(!$('#notes').hidden)return;intent=n;if(busy){queued=n;return}if(n===current)return;busy=true;const old=current;document.body.classList.add('fade');await new Promise(r=>setTimeout(r,matchMedia('(prefers-reduced-motion: reduce)').matches?0:120));current=n;update();if(window.moveCamera)await window.moveCamera(old,n);document.body.classList.remove('fade');busy=false;if(queued!==null){const q=queued;queued=null;if(q!==current)go(q)}}
 function toggleNotes(force){const open=force??$('#notes').hidden;$('#notes').hidden=!open;$('#notes-button').setAttribute('aria-expanded',open);if(open){notesFocus=document.activeElement;$('#close-notes').focus()}else notesFocus?.focus()}
-$('#prev').onclick=()=>go(current-1);$('#next').onclick=()=>go(current+1);$('#rail').onclick=e=>{const b=e.target.closest('button');if(b)go(+b.dataset.index)};$('#notes-button').onclick=()=>toggleNotes();$('#close-notes').onclick=()=>toggleNotes(false);
+$('#prev').onclick=()=>go(intent-1);$('#next').onclick=()=>go(intent+1);$('#rail').onclick=e=>{const b=e.target.closest('button');if(b)go(+b.dataset.index)};$('#notes-button').onclick=()=>toggleNotes();$('#close-notes').onclick=()=>toggleNotes(false);
 let fullscreenPending=false,fullscreenTimer;
 const fullElement=()=>document.fullscreenElement||document.webkitFullscreenElement;
 function showFullscreenHelp(){clearTimeout(fullscreenTimer);fullscreenPending=false;const help=$('#fullscreen-help');if(!help.open)help.showModal();$('#fullscreen-help-close').focus()}
@@ -66,8 +227,8 @@ $('#presentation-path').value=location.protocol==='file:'?decodeURIComponent(loc
 if(location.protocol!=='file:'){document.querySelector('label[for="presentation-path"]').textContent='ลิงก์งานนำเสนอ';$('#presentation-copy').textContent='คัดลอกลิงก์';$('#fullscreen-help').querySelectorAll('p')[1].innerHTML='เปิดลิงก์นี้ด้วย <strong>Chrome หรือ Edge</strong> แล้วกด <strong>F11</strong> เพื่อเต็มทั้งจอเครื่อง กด F11 อีกครั้งเพื่อออก'}
 $('#presentation-path').onclick=e=>e.target.select();$('#presentation-copy').onclick=async()=>{try{await navigator.clipboard.writeText($('#presentation-path').value);$('#fullscreen-help-result').textContent='คัดลอกแล้ว วางในแถบที่อยู่ของ Chrome หรือ Edge'}catch{$('#presentation-path').focus();$('#presentation-path').select();$('#fullscreen-help-result').textContent='กด Ctrl+C เพื่อคัดลอกตำแหน่งไฟล์'}};
 $('#presentation-popout').onclick=()=>{const win=window.open(location.href,'coso-erm-presentation','popup=yes,width='+screen.availWidth+',height='+screen.availHeight);if(win){win.opener=null;$('#fullscreen-help-result').textContent='เปิดหน้าต่างแยกแล้ว หากยังไม่เต็มจอ ให้เปิดไฟล์ใน Chrome หรือ Edge แล้วกด F11'}else $('#fullscreen-help-result').textContent='หน้าต่างแยกถูกบล็อก กรุณาเปิดไฟล์ใน Chrome หรือ Edge แล้วกด F11'};
-window.addEventListener('keydown',e=>{if($('#fullscreen-help').open)return;if(e.ctrlKey||e.metaKey||e.altKey)return;if(e.key.toLowerCase()==='n'){e.preventDefault();toggleNotes();return}if(e.key==='Escape'){toggleNotes(false);return}if(!$('#notes').hidden){if(e.key==='Tab'){const a=[...$('#notes').querySelectorAll('button,a')];if(e.shiftKey&&document.activeElement===a[0]){e.preventDefault();a.at(-1).focus()}else if(!e.shiftKey&&document.activeElement===a.at(-1)){e.preventDefault();a[0].focus()}}return}if(e.key.toLowerCase()==='f'){e.preventDefault();fullscreen();return}if(e.target.closest('button,a')&&[' ','Enter'].includes(e.key))return;if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){e.preventDefault();go(current+1)}if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();go(current-1)}if(e.key==='Home')go(0);if(e.key==='End')go(slides.length-1)});
-let wheel=0,wheelTimer,lastWheel=0;window.addEventListener('wheel',e=>{if(!$('#notes').hidden||busy)return;const m=e.target.closest('main');if(m&&m.scrollHeight>m.clientHeight+2&&((e.deltaY>0&&m.scrollTop+m.clientHeight<m.scrollHeight-3)||(e.deltaY<0&&m.scrollTop>0)))return;const now=Date.now();if(now-lastWheel<900)return;wheel+=e.deltaY;clearTimeout(wheelTimer);wheelTimer=setTimeout(()=>wheel=0,160);if(Math.abs(wheel)>65){go(current+Math.sign(wheel));lastWheel=now;wheel=0}},{passive:true});let touch=null;window.addEventListener('touchstart',e=>{touch={x:e.touches[0].clientX,y:e.touches[0].clientY,target:e.target}},{passive:true});window.addEventListener('touchend',e=>{if(!touch||!$('#notes').hidden)return;const dx=touch.x-e.changedTouches[0].clientX,dy=touch.y-e.changedTouches[0].clientY;const m=touch.target.closest('main');if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy))go(current+Math.sign(dx));else if(Math.abs(dy)>75&&!(m&&m.scrollHeight>m.clientHeight+2))go(current+Math.sign(dy));touch=null},{passive:true});
+window.addEventListener('keydown',e=>{if($('#fullscreen-help').open)return;if(e.ctrlKey||e.metaKey||e.altKey)return;if(e.key.toLowerCase()==='n'){e.preventDefault();toggleNotes();return}if(e.key==='Escape'){toggleNotes(false);return}if(!$('#notes').hidden){if(e.key==='Tab'){const a=[...$('#notes').querySelectorAll('button,a')];if(e.shiftKey&&document.activeElement===a[0]){e.preventDefault();a.at(-1).focus()}else if(!e.shiftKey&&document.activeElement===a.at(-1)){e.preventDefault();a[0].focus()}}return}if(e.key.toLowerCase()==='f'){e.preventDefault();fullscreen();return}if(e.target.closest('button,a')&&[' ','Enter'].includes(e.key))return;if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){e.preventDefault();go(intent+1)}if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();go(intent-1)}if(e.key==='Home')go(0);if(e.key==='End')go(slides.length-1)});
+let wheel=0,wheelTimer,lastWheel=0;window.addEventListener('wheel',e=>{if(!$('#notes').hidden)return;const m=e.target.closest('main');if(m&&m.scrollHeight>m.clientHeight+2&&((e.deltaY>0&&m.scrollTop+m.clientHeight<m.scrollHeight-3)||(e.deltaY<0&&m.scrollTop>0)))return;const now=Date.now();if(now-lastWheel<520)return;wheel+=e.deltaY;clearTimeout(wheelTimer);wheelTimer=setTimeout(()=>wheel=0,160);if(Math.abs(wheel)>65){go(intent+Math.sign(wheel));lastWheel=now;wheel=0}},{passive:true});let touch=null;window.addEventListener('touchstart',e=>{touch={x:e.touches[0].clientX,y:e.touches[0].clientY,target:e.target}},{passive:true});window.addEventListener('touchend',e=>{if(!touch||!$('#notes').hidden)return;const dx=touch.x-e.changedTouches[0].clientX,dy=touch.y-e.changedTouches[0].clientY;const m=touch.target.closest('main');if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy))go(intent+Math.sign(dx));else if(Math.abs(dy)>75&&!(m&&m.scrollHeight>m.clientHeight+2))go(intent+Math.sign(dy));touch=null},{passive:true});
 const start=Number(location.hash.slice(1));if(start>=1&&start<=slides.length)current=start-1;update();window.deckState=()=>({current,busy});setTimeout(()=>{if(!window.sceneReady)$('#status').textContent='กำลังโหลดฉาก 3D · ต้องเชื่อมต่ออินเทอร์เน็ตเพื่อโหลดฟอนต์และ Three.js'},15000);
 </script>
 <script type="module">
@@ -186,7 +347,7 @@ const performanceStats={frames:0,calls:0,triangles:0};renderer.info.autoReset=fa
 function wake(){if(!scheduled&&!document.hidden)scheduled=requestAnimationFrame(animate)}
 document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(scheduled);scheduled=0}else{dirty=true;wake()}});
 motionPreference.addEventListener('change',e=>{reducedMotion=e.matches;dirty=true;wake()});
-function animate(now){scheduled=0;if(document.hidden)return;if(!dirty&&!transition&&(reducedMotion||smooth))return;const delta=last?now-last:1000/60;last=now;if(transition){const t=Math.min(1,(now-transition.start)/2200),e=t*t*(3-2*t);camera.position.copy(transition.path.getPoint(e));look.lerpVectors(transition.a.look,transition.b.look,e);camera.lookAt(look);renderer.toneMappingExposure=1.24-1.02*Math.sin(Math.PI*t)**2;bokeh.uniforms.focus.value=camera.position.distanceTo(look);if(t===1){const done=transition.resolve;transition=null;snap(at);renderer.toneMappingExposure=1.24;done()}}if(!transition&&!reducedMotion){
+function animate(now){scheduled=0;if(document.hidden)return;if(!dirty&&!transition&&(reducedMotion||smooth))return;const delta=last?now-last:1000/60;last=now;if(transition){const t=Math.min(1,(now-transition.start)/900),e=t*t*(3-2*t);camera.position.copy(transition.path.getPoint(e));look.lerpVectors(transition.a.look,transition.b.look,e);camera.lookAt(look);renderer.toneMappingExposure=1.24-1.02*Math.sin(Math.PI*t)**2;bokeh.uniforms.focus.value=camera.position.distanceTo(look);if(t===1){const done=transition.resolve;transition=null;snap(at);renderer.toneMappingExposure=1.24;done()}}if(!transition&&!reducedMotion){
 const v=restView,seconds=(now-arrived)/1000;drift.lerp(pointer,1-Math.pow(1-.055,Math.min(delta,100)/(1000/30)));
 camera.position.copy(v.pos).add(frameOffset.set(drift.x*.38+(smooth?0:Math.sin(seconds*.18)*.10),-drift.y*.18,(smooth&&seconds>5?0:Math.exp(-seconds*.65)*.65)));
 camera.lookAt(v.look);bokeh.uniforms.focus.value=camera.position.distanceTo(focusTarget.set(0,2.4,-24*at));
