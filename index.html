@@ -180,30 +180,35 @@
 @media(max-width:760px){.controls .tools{gap:8px}.controls{left:4vw;right:4vw}.paging{gap:12px}#notes-button{font-size:0}#notes-button kbd{font-size:11px}#render-mode{font-size:10px}}
 .members{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 20px;flex:1;color:var(--muted);font-size:12px;line-height:1.5}.members>span{white-space:nowrap}.slide:first-child header{height:52px}@media(max-width:760px){.slide:first-child header{top:5vh;height:52px;gap:12px}.members{font-size:11px;column-gap:10px}}.members-label{grid-column:1/-1;color:var(--gold);font-weight:600;margin-bottom:2px}.slide:first-child header{height:72px}.sources{display:grid;gap:4px;font-size:12px;line-height:1.5}.sources strong{color:var(--gold);font-size:14px}.sources a{color:var(--muted);pointer-events:auto;text-underline-offset:3px}@media(max-width:760px){.slide:first-child header{top:3vh;height:72px}.sources{font-size:10px;gap:2px}.sources strong{font-size:12px}}body.references .scrim{background:#131510}body.references #world{visibility:hidden}body.references .scene-caption{display:none}.references-slide header,.references-slide main,.references-slide footer{left:6.5vw;width:78vw}.references-slide main{top:16vh;bottom:15vh;overflow:auto;pointer-events:auto;padding-right:12px;max-height:none}.references-slide h2{font-size:clamp(30px,3.4vw,48px);max-width:none}.reference-intro{color:var(--muted);font-size:14px;margin:8px 0 20px}.reference-list{list-style:none;margin:0;padding:0;display:grid;gap:0}.reference-list li{display:grid;grid-template-columns:32px 1fr;gap:16px;border-top:1px solid var(--hair);padding:14px 0;font-size:14px}.reference-list li:before{display:none}.ref-number{color:var(--gold);font-size:12px}.reference-list h3{font-size:clamp(15px,1.45vw,20px);line-height:1.4;font-weight:500;margin:0 0 5px}.reference-list p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}.ref-meta{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:4px;font-size:11px;color:var(--muted)}.ref-meta a{color:var(--gold);text-underline-offset:3px}.references-slide footer{bottom:9vh}@media(max-width:760px){.references-slide header{top:5vh}.references-slide main{top:24vh;bottom:15vh;width:87vw;max-height:none}.references-slide footer{width:87vw}.reference-list li{grid-template-columns:24px 1fr;gap:8px;padding:12px 0}.reference-intro{font-size:12px}.ref-meta{display:grid;gap:3px}}@media(max-height:760px) and (min-width:761px){.reference-list li{padding:8px 0}.reference-list h3{font-size:15px}.reference-intro{margin-bottom:10px}.references-slide main{top:16vh;bottom:16vh}}
 
-/* presenter figure: opposite side from the text column, clear of the rail and control bar */
+/* presenter figure: only on three slides, always on the side the text is not */
 #presenter{position:fixed;bottom:0;right:0;height:80vh;aspect-ratio:756/1100;
- z-index:auto;pointer-events:none;filter:drop-shadow(0 10px 26px rgba(0,0,0,.6));
- transition:opacity .22s ease,right .45s ease,left .45s ease;-webkit-mask-image:linear-gradient(to bottom,#000 84%,transparent 100%);mask-image:linear-gradient(to bottom,#000 84%,transparent 100%)}
+ z-index:auto;pointer-events:none;opacity:0;
+ filter:drop-shadow(0 10px 26px rgba(0,0,0,.6));transition:opacity .22s ease;
+ -webkit-mask-image:linear-gradient(to bottom,#000 84%,transparent 100%);
+ mask-image:linear-gradient(to bottom,#000 84%,transparent 100%)}
 #presenter::before{content:"";position:absolute;inset:-8% -16% -4%;
  background:radial-gradient(58% 54% at 50% 62%,rgba(255,241,220,.085),transparent 72%)}
-#presenter img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
- transition:opacity .3s ease}
-#presenter .p-smile{opacity:0}
+#presenter img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0}
 /* text sits right on odd slides, so the figure moves left */
 body.right #presenter{right:auto;left:0}
-/* opening and closing slides get the wider smile */
-body[data-slide="0"] #presenter .p-smile,body[data-slide="7"] #presenter .p-smile{opacity:1}
-body[data-slide="0"] #presenter .p-calm,body[data-slide="7"] #presenter .p-calm{opacity:0}
-/* hidden on the full-width references slide, and during a slide change so the side swap is unseen */
-body.references #presenter,body.fade #presenter{opacity:0}
-@media (max-height:760px) and (min-width:761px){#presenter{height:68vh}}
+/* slide 1 calm, slide 3 smiling, slide 8 the chibi */
+body[data-slide="0"] #presenter,body[data-slide="2"] #presenter,body[data-slide="7"] #presenter{opacity:1}
+body[data-slide="0"] #presenter .p-calm{opacity:1}
+body[data-slide="2"] #presenter .p-smile{opacity:1}
+body[data-slide="7"] #presenter .p-chibi{opacity:1}
+/* the chibi is a bust, so it carries its own proportions and height */
+body[data-slide="7"] #presenter{aspect-ratio:863/1100;height:55vh}
+/* hidden during a slide change so the side swap is never seen */
+body.fade #presenter{opacity:0}
+@media (max-height:760px) and (min-width:761px){#presenter{height:68vh}
+ body[data-slide="7"] #presenter{height:48vh}}
 @media (max-width:760px){#presenter{display:none}}
 @media (prefers-reduced-motion: reduce){#presenter{transition:none}}
 </style>
 <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
 </head><body>
 <canvas id="world" aria-label="ห้องโถงสามมิติ แท่นจัดแสดงแปดฉาก"></canvas><div class="scrim"></div>
-<div id="presenter" aria-hidden="true"><img class="p-calm" src="img/presenter-calm.webp" alt="" decoding="async"><img class="p-smile" src="img/presenter-smile.webp" alt="" decoding="async"></div>
+<div id="presenter" aria-hidden="true"><img class="p-calm" src="img/presenter-calm.webp" alt="" decoding="async"><img class="p-smile" src="img/presenter-smile.webp" alt="" decoding="async"><img class="p-chibi" src="img/presenter-chibi.webp" alt="" decoding="async"></div>
 <div id="slides"></div><nav id="rail" aria-label="เลือกฉาก"></nav><div class="scene-caption" id="scene-caption"></div>
 <div class="controls"><div class="tools"><button id="notes-button" aria-expanded="false" aria-controls="notes"><kbd>N</kbd>บันทึกผู้บรรยาย</button><button id="fullscreen"><kbd>F</kbd>เต็มจอ</button><span class="hint">เลื่อนเพื่อเดินต่อ · ลูกศร / Space</span></div><div class="paging"><button id="prev" aria-label="สไลด์ก่อนหน้า">← Prev</button><button id="next" aria-label="สไลด์ถัดไป">Next →</button></div></div>
 <div id="progress"></div><aside id="notes" role="dialog" aria-modal="true" aria-label="บันทึกผู้บรรยาย" hidden><button id="close-notes" aria-label="ปิดบันทึก">×</button><small id="notes-label"></small><h2 id="notes-title"></h2><div id="notes-content"></div></aside><div id="status" role="status">กำลังจัดแสงและเตรียมห้องจัดแสดง…</div>
