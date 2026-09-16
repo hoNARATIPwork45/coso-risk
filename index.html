@@ -192,16 +192,17 @@
 /* text sits right on odd slides, so the figure moves left */
 body.right #presenter{right:auto;left:0}
 /* slide 1 calm, slide 3 smiling, slide 8 the chibi */
-body[data-slide="0"] #presenter,body[data-slide="2"] #presenter,body[data-slide="7"] #presenter{opacity:1}
+body[data-slide="0"] #presenter,body[data-slide="2"] #presenter,body[data-slide="8"] #presenter{opacity:1}
 body[data-slide="0"] #presenter .p-calm{opacity:1}
 body[data-slide="2"] #presenter .p-smile{opacity:1}
-body[data-slide="7"] #presenter .p-chibi{opacity:1}
-/* the chibi is a bust, so it carries its own proportions and height */
-body[data-slide="7"] #presenter{aspect-ratio:863/1100;height:55vh}
+body[data-slide="8"] #presenter .p-chibi{opacity:1}
+/* the chibi is a small bust in the corner, with its own proportions */
+body[data-slide="8"] #presenter{aspect-ratio:863/1100;height:27vh;bottom:64px;
+ -webkit-mask-image:none;mask-image:none}
 /* hidden during a slide change so the side swap is never seen */
 body.fade #presenter{opacity:0}
 @media (max-height:760px) and (min-width:761px){#presenter{height:68vh}
- body[data-slide="7"] #presenter{height:48vh}}
+ body[data-slide="8"] #presenter{height:24vh}}
 @media (max-width:760px){#presenter{display:none}}
 @media (prefers-reduced-motion: reduce){#presenter{transition:none}}
 </style>
