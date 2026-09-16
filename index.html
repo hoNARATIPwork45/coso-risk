@@ -196,15 +196,19 @@ body[data-slide="0"] #presenter,body[data-slide="2"] #presenter,body[data-slide=
 body[data-slide="0"] #presenter .p-calm{opacity:1}
 body[data-slide="2"] #presenter .p-smile{opacity:1}
 body[data-slide="8"] #presenter .p-chibi{opacity:1}
-/* the chibi floats in the blank band between the reference text and the rail.
-   right:170px keeps it left of the rail (16px + 144px max width) at any size,
-   which also keeps it clear of the longest entry title, which ends near x1000. */
-body[data-slide="8"] #presenter{aspect-ratio:863/1100;height:34vh;top:24vh;bottom:auto;right:170px;
- -webkit-mask-image:none;mask-image:none}
+/* The references page is the one slide whose text fills the width, so the chibi
+   only appears where there is genuinely room. The entry titles end near x1000
+   at any width (their font size is fixed) and the rail takes right:16px+144px,
+   so a blank band opens up from about 1500px. Narrower than that, both the band
+   and the bottom corner are taken -- the corner runs into the rail and the
+   09/09 page number -- so the figure stays hidden rather than cover text. */
+body[data-slide="8"] #presenter{display:none}
+@media (min-width:1500px){body[data-slide="8"] #presenter{display:block;
+ aspect-ratio:863/1100;height:min(34vh,24vw);top:24vh;bottom:auto;right:170px;
+ -webkit-mask-image:none;mask-image:none}}
 /* hidden during a slide change so the side swap is never seen */
 body.fade #presenter{opacity:0}
-@media (max-height:760px) and (min-width:761px){#presenter{height:68vh}
- body[data-slide="8"] #presenter{height:30vh}}
+@media (max-height:760px) and (min-width:761px){#presenter{height:68vh}}
 @media (max-width:760px){#presenter{display:none}}
 @media (prefers-reduced-motion: reduce){#presenter{transition:none}}
 </style>
