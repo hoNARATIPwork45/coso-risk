@@ -196,13 +196,15 @@ body[data-slide="0"] #presenter,body[data-slide="2"] #presenter,body[data-slide=
 body[data-slide="0"] #presenter .p-calm{opacity:1}
 body[data-slide="2"] #presenter .p-smile{opacity:1}
 body[data-slide="8"] #presenter .p-chibi{opacity:1}
-/* the chibi is a small bust in the corner, with its own proportions */
-body[data-slide="8"] #presenter{aspect-ratio:863/1100;height:27vh;bottom:64px;
+/* the chibi floats in the blank band between the reference text and the rail.
+   right:170px keeps it left of the rail (16px + 144px max width) at any size,
+   which also keeps it clear of the longest entry title, which ends near x1000. */
+body[data-slide="8"] #presenter{aspect-ratio:863/1100;height:34vh;top:24vh;bottom:auto;right:170px;
  -webkit-mask-image:none;mask-image:none}
 /* hidden during a slide change so the side swap is never seen */
 body.fade #presenter{opacity:0}
 @media (max-height:760px) and (min-width:761px){#presenter{height:68vh}
- body[data-slide="8"] #presenter{height:24vh}}
+ body[data-slide="8"] #presenter{height:30vh}}
 @media (max-width:760px){#presenter{display:none}}
 @media (prefers-reduced-motion: reduce){#presenter{transition:none}}
 </style>
